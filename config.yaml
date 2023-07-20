@@ -1,0 +1,121 @@
+baseURL: "https://www.svenshen.com/"
+title: "Call me Sven"
+paginate: 5
+theme: PaperMod
+copyright: "[Call me Sven](https://www.svenshen.com)"
+
+
+
+# https://github.com/adityatelange/hugo-PaperMod/wiki/Variables
+params:
+  title: "Call me Sven"
+  description: "This is Sven's Blog!"
+  keywords: [Blog, Portfolio, PaperMod]
+  author: Sven
+  DateFormat: "January 2, 2006"
+  defaultTheme: auto # dark, light
+  disableThemeToggle: false
+
+  ShowReadingTime: true
+  ShowPostNavLinks: true
+  ShowCodeCopyButtons: true
+  searchHidden: false
+  ShowWordCount: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: true
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: false
+  tocopen: false
+
+  label:
+    text: "Home"
+    icon: /apple-touch-icon.png
+    iconHeight: 35
+
+  # profile-mode
+  profileMode:
+    enabled: True # needs to be explicitly set
+    title: "Call me Sven"
+    subtitle: "This is a new blog!"
+    imageUrl: "images/keyboard.jpg"
+    imageWidth: 150
+    imageHeight: 150
+    imageTitle: Keyboard
+    buttons:
+      - name: Posts
+        url: posts
+      - name: Tags
+        url: tags
+
+  # # home-info mode
+  # homeInfoParams:
+  #   enabled: false
+  #   Title: "Hi there \U0001F44B"
+  #   Content: Welcome to my blog
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/sven0219"
+
+
+  cover:
+    hidden: true # hide everywhere but not in structured data
+    hiddenInList: true # hide on list pages and home
+    hiddenInSingle: true # hide on single page
+
+  editPost:
+    URL: "https://github.com/sven0219/sven-blog/content"
+    Text: "Suggest Changes" # edit text
+    appendFilePath: true # to append file path to Edit link
+
+  # for search
+  # https://fusejs.io/api/options.html
+  fuseOpts:
+    isCaseSensitive: true
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+outputs:
+    home:
+      - HTML
+      - RSS
+      - JSON 
+menu:
+  main:
+    - identifier: categories
+      name: categories
+      url: /categories/
+      weight: 10
+    - identifier: tags
+      name: tags
+      url: /tags/
+      weight: 20
+    - identifier: about
+      name: about
+      url: /about/
+      weight: 25
+    - identifier: archives
+      name: archives
+      url: /archives/
+      weight: 27
+    - identifier: search
+      name: search
+      url: /search/
+      weight: 30
+
+
+# Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
+markup:
+  highlight:
+    # anchorLineNos: true
+    codeFences: true
+    guessSyntax: true
+    lineNos: true
+    # noClasses: false
+    style: monokai
